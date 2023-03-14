@@ -46,12 +46,12 @@ function wporg_add_custom_post_types($query) {
 add_action('pre_get_posts', 'wporg_add_custom_post_types');
 
 /* here's all installation related stuff, creating new tables, etc */
-include "install/tallbike-installation.php";
+include "install/fragen-antworten-installation.php";
 
 // -----------------------------------
 //       S H O R T C O D E S
 // -----------------------------------
-require_once( 'fragen-antworten-shortcodes.php' );
+require_once( 'fragen-antworten-shortcodes.php');
 
 add_shortcode('fa_tester', 'fa_tester');
 
