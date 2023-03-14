@@ -28,7 +28,7 @@ register_activation_hook( __FILE__ , 'fragen_antworten_install' );
 // hier werden wohl die Datentypen und Shortcode Definitionen festgelegt:
 add_action( 'init', 'faFragen_setup_post_type');
 //add_action( 'init', 'faSterne_setup_post_type');
-add_action( 'init', 'fragen_antworten_shortcodes_init');
+//add_action( 'init', 'fragen_antworten_shortcodes_init');
 
 //todo: this doesn't seem to work!
 register_deactivation_hook( __FILE__ , 'fragen_antworten_delete' );

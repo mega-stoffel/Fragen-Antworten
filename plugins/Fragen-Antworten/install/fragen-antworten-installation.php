@@ -37,12 +37,14 @@ function faFragen_setup_post_type() {
         'public'      => true,
         'has_archive' => true,
         'menu_position' => 6,
-        'supports' => ['title','editor','author','custom-fields','thumbnail','page-attributes','post-formats'],
-        'rewrite' => array( 'slug' => 'fragen'), 
+        'menu_icon' => 'dashicons-question-mark',
+        'supports' => ['title','editor','author','comments','page-attributes','post-formats'],
+        'rewrite' => array( 'slug' => 'fragen', 'feeds' => 'true'), 
         'publicly_queryable' => true,
         'delete_with_user' => false,
         //this is the important line for the entries in the Block Editor!
         'show_in_rest' => true,
+        'taxonomies' => 'category'
     );
     register_post_type( 'Fragen', $Fragen_Options); 
     // Fragen will be accessible with this URL: http://localhost:8888/?post_type=fragen
