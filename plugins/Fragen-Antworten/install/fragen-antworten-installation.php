@@ -10,7 +10,7 @@ function fragen_antworten_install()
     //faSterne_setup_post_type(); 
 
     // adding the dedicated SQL commands:
-    tbSQL_setup(); 
+    //faSQL_setup(); 
 
     // Clear the permalinks after the post type has been registered.
     // flush_rewrite_rules(); (used to be here, tried it with the events-archive-issue)
@@ -37,14 +37,14 @@ function faFragen_setup_post_type() {
         'public'      => true,
         'has_archive' => true,
         'menu_position' => 6,
-        'menu_icon' => 'dashicons-question-mark',
+        'menu_icon' => 'dashicons-format-status',
         'supports' => ['title','editor','author','comments','page-attributes','post-formats'],
         'rewrite' => array( 'slug' => 'fragen', 'feeds' => 'true'), 
         'publicly_queryable' => true,
         'delete_with_user' => false,
         //this is the important line for the entries in the Block Editor!
         'show_in_rest' => true,
-        'taxonomies' => 'category'
+        'taxonomies' => array( 'category')
     );
     register_post_type( 'Fragen', $Fragen_Options); 
     // Fragen will be accessible with this URL: http://localhost:8888/?post_type=fragen
@@ -57,7 +57,7 @@ function faFragen_setup_post_type() {
 
 // Diese SQL Funktion wird evtl. benötigt, wenn ich Fragen mit Sternen verbinden will. Wer weiß, ob das nötig ist.
 //function tallbike_Hardcoding_SQL () {
-function tbSQL_setup ()
+function faSQL_setup ()
 {
     global $wpdb;
  
