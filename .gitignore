@@ -9,6 +9,7 @@ wp-content/*
 !wp-content/themes/
 
 # ignore these plugins
+plugins/index.php
 plugins/hello.php
 plugins/akismet/*
 
