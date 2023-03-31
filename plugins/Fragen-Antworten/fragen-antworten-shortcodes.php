@@ -9,7 +9,22 @@
 // ------------------------------------------
 function fa_tester()
 {
-    $fa_output = 'test_12';
+    $tags="";
+    $current_tags = get_tags();
+    foreach ( $current_tags as $current_tag )
+    {
+        $tags .= $current_tag->name . " .. ";
+
+        // if (strlen($current_tag->name) == 7)
+        // {
+        //     $current_week = $current_tag;
+        // }
+                
+    }
+
+    $fa_output = "<div>";
+    $fa_output .= 'test_12 für die Woche:' . $tags;
+    $fa_output .= "</div>";
     return $fa_output;
 }
 
