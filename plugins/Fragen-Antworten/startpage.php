@@ -30,7 +30,7 @@ add_action( 'init', 'faFragen_setup_post_type');
 //add_action( 'init', 'fragen_antworten_shortcodes_init');
 
 //todo: this doesn't seem to work! But maybe I just need that function?
-//register_deactivation_hook( __FILE__ , 'fragen_antworten_delete' );
+register_deactivation_hook( __FILE__ , 'fragen_antworten_delete' );
 
 // hmmmmmm?
 // This function adds bikes and events to the regular posts query!
