@@ -3,18 +3,17 @@
 Plugin Name:  Fragen-Antworten Plugin
 Plugin URI:   https://github.com/mega-stoffel/fragen-antworten
 Description:  Wöchentliche Fragen stellen, bewerten und beantworten
-Version:      $fragen_antworten_db_version
+Version:      0.1 
 Author:       X-tof Hoyer
 Author URI:   https://coverd.mega-stoffel.de
-*/
 
 // Keine Ahnung, was das hier ist?
-/*if ( ! current_user_can( 'activate_plugins' ) ) {
+if ( ! current_user_can( 'activate_plugins' ) ) {
 	return;
-}*/
+}
 
 //Keine Ahnung, was das hier ist?
-/*$plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
+$plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
 check_admin_referer( "activate-plugin_{$plugin}" );*/
 
 //These two lines define my own theme output:
