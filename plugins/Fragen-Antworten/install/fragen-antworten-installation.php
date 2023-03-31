@@ -44,7 +44,7 @@ function faFragen_setup_post_type() {
         'delete_with_user' => false,
         //this is the important line for the entries in the Block Editor!
         'show_in_rest' => true,
-        'taxonomies' => array( 'category')
+        'taxonomies' => array('tags')
     );
     register_post_type( 'Fragen', $Fragen_Options); 
     // Fragen will be accessible with this URL: http://localhost:8888/?post_type=fragen
@@ -54,6 +54,12 @@ function faFragen_setup_post_type() {
 //function faSterne_setup_post_type()
 //{
 //}
+
+// This function is executed, whenever this plugin is removed.
+function fragen_antworten_delete()
+{ 
+    return true;
+}
 
 // Diese SQL Funktion wird evtl. benötigt, wenn ich Fragen mit Sternen verbinden will. Wer weiß, ob das nötig ist.
 //function tallbike_Hardcoding_SQL () {

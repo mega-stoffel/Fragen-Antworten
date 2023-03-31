@@ -3,7 +3,7 @@
 Plugin Name:  Fragen-Antworten Plugin
 Plugin URI:   https://github.com/mega-stoffel/fragen-antworten
 Description:  Wöchentliche Fragen stellen, bewerten und beantworten
-Version:      0.1
+Version:      $fragen_antworten_db_version
 Author:       X-tof Hoyer
 Author URI:   https://coverd.mega-stoffel.de
 */
@@ -11,10 +11,10 @@ Author URI:   https://coverd.mega-stoffel.de
 // Keine Ahnung, was das hier ist?
 /*if ( ! current_user_can( 'activate_plugins' ) ) {
 	return;
-}
+}*/
 
-// Keine Ahnung, was das hier ist?
-$plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
+//Keine Ahnung, was das hier ist?
+/*$plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
 check_admin_referer( "activate-plugin_{$plugin}" );*/
 
 //These two lines define my own theme output:
@@ -23,16 +23,15 @@ check_admin_referer( "activate-plugin_{$plugin}" );*/
 
 // damit kann man wohl etwas "installieren", wenn das Plugin aktiviert wird
 register_activation_hook( __FILE__ , 'fragen_antworten_install' );
-//register_activation_hook( __FILE__ , 'tallbike_install_data' );
+//register_activation_hook( __FILE__ , 'fragen_antworten_install_data' );
 
 // hier werden wohl die Datentypen und Shortcode Definitionen festgelegt:
 add_action( 'init', 'faFragen_setup_post_type');
 //add_action( 'init', 'faSterne_setup_post_type');
 //add_action( 'init', 'fragen_antworten_shortcodes_init');
 
-//todo: this doesn't seem to work!
-register_deactivation_hook( __FILE__ , 'fragen_antworten_delete' );
-
+//todo: this doesn't seem to work! But maybe I just need that function?
+//register_deactivation_hook( __FILE__ , 'fragen_antworten_delete' );
 
 // hmmmmmm?
 // This function adds bikes and events to the regular posts query!
