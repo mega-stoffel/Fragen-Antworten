@@ -44,7 +44,7 @@ function faFragen_setup_post_type() {
         'delete_with_user' => false,
         //this is the important line for the entries in the Block Editor!
         'show_in_rest' => true,
-        'taxonomies' => array('tags')
+        'taxonomies' => array('post_tag')
     );
     register_post_type( 'Fragen', $Fragen_Options); 
     // Fragen will be accessible with this URL: http://localhost:8888/?post_type=fragen

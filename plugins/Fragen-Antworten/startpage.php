@@ -3,13 +3,12 @@
 Plugin Name:  Fragen-Antworten Plugin
 Plugin URI:   https://github.com/mega-stoffel/fragen-antworten
 Description:  Wöchentliche Fragen stellen, bewerten und beantworten
-Version:      $fragen_antworten_db_version
+Version:      0.1
 Author:       X-tof Hoyer
 Author URI:   https://coverd.mega-stoffel.de
-*/
 
 // Keine Ahnung, was das hier ist?
-/*if ( ! current_user_can( 'activate_plugins' ) ) {
+if ( ! current_user_can( 'activate_plugins' ) ) {
 	return;
 }*/
 
@@ -31,7 +30,7 @@ add_action( 'init', 'faFragen_setup_post_type');
 //add_action( 'init', 'fragen_antworten_shortcodes_init');
 
 //todo: this doesn't seem to work! But maybe I just need that function?
-//register_deactivation_hook( __FILE__ , 'fragen_antworten_delete' );
+register_deactivation_hook( __FILE__ , 'fragen_antworten_delete' );
 
 // hmmmmmm?
 // This function adds bikes and events to the regular posts query!
