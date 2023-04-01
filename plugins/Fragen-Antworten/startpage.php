@@ -51,6 +51,7 @@ include "install/fragen-antworten-installation.php";
 // -----------------------------------
 require_once( 'fragen-antworten-shortcodes.php');
 
+add_shortcode('fa_getQuestionswithtag', 'fa_getQuestionswithtag');
 add_shortcode('fa_tester', 'fa_tester');
 
 
